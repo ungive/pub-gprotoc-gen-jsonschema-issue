@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+import "jsonschema.proto";
+
+message Message {
+  float exclusive_minimum = 1 [
+    (pubg.jsonschema.field) = {numeric : {exclusive_minimum : 0}}
+  ];
+  float inclusive_minimum = 2 [
+    (pubg.jsonschema.field) = {numeric : {inclusive_minimum : 0}}
+  ];
+  float exclusive_maximum = 3 [
+    (pubg.jsonschema.field) = {numeric : {exclusive_maximum : 0}}
+  ];
+  float inclusive_maximum = 4 [
+    (pubg.jsonschema.field) = {numeric : {inclusive_maximum : 0}}
+  ];
+  float exclusive_minimum__exclusive_maximum = 5 [
+    (pubg.jsonschema.field) = {numeric : {exclusive_minimum : 0, exclusive_maximum: 10}}
+  ];
+  float exclusive_minimum__inclusive_maximum = 6 [
+    (pubg.jsonschema.field) = {numeric : {exclusive_minimum : 0, inclusive_maximum: 10}}
+  ];
+  float inclusive_minimum__exclusive_maximum = 7 [
+    (pubg.jsonschema.field) = {numeric : {inclusive_minimum : 0, exclusive_maximum: 10}}
+  ];
+  float inclusive_minimum__inclusive_maximum = 8 [
+    (pubg.jsonschema.field) = {numeric : {inclusive_minimum : 0, inclusive_maximum: 10}}
+  ];
+}

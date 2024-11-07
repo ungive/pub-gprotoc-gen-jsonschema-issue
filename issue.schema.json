@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$ref": "#/$defs/.Message",
+  "$defs": {
+    ".Message": {
+      "properties": {
+        "exclusive_minimum": {
+          "$ref": "#/$defs/.Message.exclusive_minimum"
+        },
+        "inclusive_minimum": {
+          "$ref": "#/$defs/.Message.inclusive_minimum"
+        },
+        "exclusive_maximum": {
+          "$ref": "#/$defs/.Message.exclusive_maximum"
+        },
+        "inclusive_maximum": {
+          "$ref": "#/$defs/.Message.inclusive_maximum"
+        },
+        "exclusive_minimum__exclusive_maximum": {
+          "$ref": "#/$defs/.Message.exclusive_minimum__exclusive_maximum"
+        },
+        "exclusive_minimum__inclusive_maximum": {
+          "$ref": "#/$defs/.Message.exclusive_minimum__inclusive_maximum"
+        },
+        "inclusive_minimum__exclusive_maximum": {
+          "$ref": "#/$defs/.Message.inclusive_minimum__exclusive_maximum"
+        },
+        "inclusive_minimum__inclusive_maximum": {
+          "$ref": "#/$defs/.Message.inclusive_minimum__inclusive_maximum"
+        }
+      },
+      "type": "object",
+      "required": [
+        "exclusive_minimum",
+        "inclusive_minimum",
+        "exclusive_maximum",
+        "inclusive_maximum",
+        "exclusive_minimum__exclusive_maximum",
+        "exclusive_minimum__inclusive_maximum",
+        "inclusive_minimum__exclusive_maximum",
+        "inclusive_minimum__inclusive_maximum"
+      ]
+    },
+    ".Message.exclusive_minimum": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    ".Message.inclusive_minimum": {
+      "type": "number",
+      "maximum": 0
+    },
+    ".Message.exclusive_maximum": {
+      "type": "number",
+      "exclusiveMaximum": 0
+    },
+    ".Message.inclusive_maximum": {
+      "type": "number",
+      "minimum": 0
+    },
+    ".Message.exclusive_minimum__exclusive_maximum": {
+      "type": "number",
+      "exclusiveMaximum": 10,
+      "exclusiveMinimum": 0
+    },
+    ".Message.exclusive_minimum__inclusive_maximum": {
+      "type": "number",
+      "minimum": 10,
+      "exclusiveMinimum": 0
+    },
+    ".Message.inclusive_minimum__exclusive_maximum": {
+      "type": "number",
+      "maximum": 0,
+      "exclusiveMaximum": 10
+    },
+    ".Message.inclusive_minimum__inclusive_maximum": {
+      "type": "number",
+      "maximum": 0,
+      "minimum": 10
+    }
+  },
+  "type": "object"
+}
