@@ -1,0 +1,4 @@
+{
+    "$schema": "./issue.schema.json",
+    "fooBarBaz": -1.0
+}
